@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>POVI Pay 결제</title>
+    <link href="./css/sidebar.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .pay_title
+      {
+        margin-top : 150px;
+        font-size : 80px;
+        margin-bottom : 150px;
+      }
+      .back
+      {
+        font-size : 50px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <input type="checkbox" id="menuicon">
+    <label for="menuicon">
+       <span></span>
+     	<span></span>
+    	<span></span>
+    </label>
+    <div class="sidebar">
+       	<a href="menu.html">메인메뉴</a><br>
+          <a href="charge.html">충전</a><br>
+          <a href="pay.html">결제</a><br>
+          <a href="index.html">로그아웃</a><br>
+    </div>
+    <p class="title" align="center">
+      결제 항목 선택
+    </p>
+    <hr color="rgb(102, 102, 92)" class="line">
+    <div>
+      <p align="center">
+        <a href="laundry.html">
+          <img src="image/pay/1.png" alt="세탁기" width=150px>
+        </a>
+        <a href="printer.html">
+          <img src="image/pay/3.png" alt="프린터" width=150px>
+        </a>
+      </p>
+      <p align="center">
+        <a href="cafeteria.html">
+          <img src="image/pay/4.png" alt="학생식당" width=150px>
+        </a>
+        <a href="store.html">
+          <img src="image/pay/2.png" alt="편의점" width=150px>
+        </a>
+      </p>
+      <p align="center">
+        <button type="button" class="button-back" onclick="location.href='./menu.html'" align="right">Back</button>
+      </p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="image/laundry.ico" type="image/x-icon">
+    <link rel="icon" href="image/laundry.ico" type="image/x-icon">
+    <title>세탁기 이용</title>
+  </head>
+
+  <body>
+    <div align="center">
+      <br>
+      <p class="title">
+        Laundry Service
+      </p>
+      <hr color="rgb(102, 102, 92)" class="line">
+
+      <div align="center">
+        <button type="button" class="button-back" onclick="location.href='./pay.html'">Back</button>
+
+        <table width="300px" align="center" class="table">
+          <tr height="160px">
+            <td align="center" bgcolor="#EEEEF0" class="block" onClick="location.href='laundry_reservation.html'">
+              <font style="font-size: 16px;">RC 1층 0번</font><br>
+              <img src="image/laundry.png" alt="Image Error" height="60px">
+              <br>
+              <font style="font-size: 12px;">남은 시간</font><br>
+              <font style="font-size: 16px;">
+                <?php
+                  include('conn.php');
+                  $sql = "SELECT * FROM laundry where no='1'";
+                  $result = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_array($result);
+                  $fin = $row['end_time'];
+                  $now = date('Y-m-d H:i:s');
+                  $left = strtotime($fin) - strtotime($now);
+                  if($left > 0){
+                    $hour = floor($left/3600);
+                    $min = floor(($left%3600)/60);
+                    echo $hour," : ",$min;
+                  } else {
+                    echo "0 : 0";
+                  }
+                ?>
+              </font>
+            </td>
+            <td align="center" bgcolor="#EEEEF0" class="block" onClick="location.href='laundry_one.html'">
+              <font style="font-size: 16px;">RC 1층 1번</font><br>
+              <img src="image/laundry.png" alt="Image Error" height="60px">
+              <br>
+              <font style="font-size: 12px;">남은 시간</font><br>
+              <font style="font-size: 16px;">
+                <?php
+                  $sql = "SELECT * FROM laundry where no='2'";
+                  $result = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_array($result);
+                  $fin = $row['end_time'];
+                  $now = date('Y-m-d H:i:s');
+                  $left = strtotime($fin) - strtotime($now);
+                  if($left > 0){
+                    $hour = floor($left/3600);
+                    $min = floor(($left%3600)/60);
+                    echo $hour," : ",$min;
+                  } else {
+                    echo "0 : 0";
+                  }
+                ?>
+              </font>
+            </td>
+          </tr>
+          <tr height="160px">
+            <td align="center"bgcolor="#EEEEF0" class="block" onClick="location.href='laundry_two.html'">
+              <font style="font-size: 16px;">RC 1층 2번</font><br>
+              <img src="image/laundry.png" alt="Image Error" height="60px">
+              <br>
+              <font style="font-size: 12px;">남은 시간</font><br>
+              <font style="font-size: 16px;">
+                <?php
+                  $sql = "SELECT * FROM laundry where no='3'";
+                  $result = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_array($result);
+                  $fin = $row['end_time'];
+                  $now = date('Y-m-d H:i:s');
+                  $left = strtotime($fin) - strtotime($now);
+                  if($left > 0){
+                    $hour = floor($left/3600);
+                    $min = floor(($left%3600)/60);
+                    echo $hour," : ",$min;
+                  } else {
+                    echo "0 : 0";
+                  }
+                ?>
+              </font>
+            </td>
+            <td align="center" bgcolor="#EEEEF0" class="block">
+              <font style="font-size: 16px;">RC 1층 3번</font><br>
+              <img src="image/laundry.png" alt="Image Error" height="60px">
+              <br>
+              <font style="font-size: 12px;">남은 시간</font><br>
+              <font style="font-size: 16px;">
+                <?php
+                  $sql = "SELECT * FROM laundry where no='4'";
+                  $result = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_array($result);
+                  $fin = $row['end_time'];
+                  $now = date('Y-m-d H:i:s');
+                  $left = strtotime($fin) - strtotime($now);
+                  if($left > 0){
+                    $hour = floor($left/3600);
+                    $min = floor(($left%3600)/60);
+                    echo $hour," : ",$min;
+                  } else {
+                    echo "0 : 0";
+                  }
+                ?>
+              </font>
+            </td>
+          </tr>
+          <tr height="160px">
+            <td align="center" bgcolor="#EEEEF0" class="block">
+              <font style="font-size: 16px;">RC 1층 4번</font><br>
+              <img src="image/laundry.png" alt="Image Error" height="60px">
+              <br>
+              <font style="font-size: 12px;">남은 시간</font><br>
+              <font style="font-size: 16px;">
+                <?php
+                  $sql = "SELECT * FROM laundry where no='5'";
+                  $result = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_array($result);
+                  $fin = $row['end_time'];
+                  $now = date('Y-m-d H:i:s');
+                  $left = strtotime($fin) - strtotime($now);
+                  if($left > 0){
+                    $hour = floor($left/3600);
+                    $min = floor(($left%3600)/60);
+                    echo $hour," : ",$min;
+                  } else {
+                    echo "0 : 0";
+                  }
+                ?>
+              </font>
+            </td>
+            <td align="center" bgcolor="#EEEEF0" class="block">
+              <font style="font-size: 16px;">RC 1층 5번</font><br>
+              <img src="image/laundry.png" alt="Image Error" height="60px">
+              <br>
+              <font style="font-size: 12px;">남은 시간</font><br>
+              <font style="font-size: 16px;">
+                <?php
+                  $sql = "SELECT * FROM laundry where no='6'";
+                  $result = mysqli_query($conn, $sql);
+                  $row = mysqli_fetch_array($result);
+                  $fin = $row['end_time'];
+                  $now = date('Y-m-d H:i:s');
+                  $left = strtotime($fin) - strtotime($now);
+                  if($left > 0){
+                    $hour = floor($left/3600);
+                    $min = floor(($left%3600)/60);
+                    echo $hour," : ",$min;
+                  } else {
+                    echo "0 : 0";
+                  }
+                ?>
+              </font>
+            </td>
+          </tr>
+          
+        </table>
+        
+      </div>
+    </div>
+
+  </body>
+</html>
